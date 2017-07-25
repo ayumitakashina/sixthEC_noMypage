@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
   resources :bicycleposts
   resources :bicyclecategories
   devise_for :admins
