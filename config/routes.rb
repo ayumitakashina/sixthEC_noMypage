@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   get 'users/show'
 
   resources :bicycleposts
