@@ -32,4 +32,21 @@
 
 <br>
 
+<hr>
+<p>カテゴリー一覧</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Category</th>
+  </tr>
+
+  <% @categories.each do |obj| %>
+  <tr>
+    <td><%= obj.id %></td>
+    <td><%= obj.name %>
+  </tr>
+  <% end %>
+</table>
+
+
 <%= link_to 'New Bicyclepost', new_bicyclepost_path %>
