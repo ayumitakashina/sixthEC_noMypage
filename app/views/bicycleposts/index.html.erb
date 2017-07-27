@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Bicycleposts</h1>
+<h1>自転車屋さん</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Value</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Bicyclecategory</th>
+      <th>商品番号</th>
+      <th>商品名</th>
+      <th>価格</th>
+      <th>説明</th>
+      <th>画像</th>
+      <th>カテゴリー番号</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
   <tbody>
     <% @bicycleposts.each do |bicyclepost| %>
       <tr>
+        <td><%= bicyclepost.id %>
         <td><%= bicyclepost.name %></td>
         <td><%= bicyclepost.value %></td>
         <td><%= bicyclepost.description %></td>
@@ -31,5 +33,21 @@
 </table>
 
 <br>
+<hr>
+<p>カテゴリー一覧</p>
+<table>
+  <tr>
+    <th>カテゴリー番号</th>
+    <th>カテゴリー名</th>
+  </tr>
+
+  <% @categories.each do |obj| %>
+  <tr>
+    <td><a href="/bicycles/index/<%= obj.id %>"><%= obj.id %></a></td>
+    <td><%= obj.name %>
+  </tr>
+  <% end %>
+</table>
+
 
 <%= link_to 'New Bicyclepost', new_bicyclepost_path %>

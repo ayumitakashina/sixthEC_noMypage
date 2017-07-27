@@ -6,6 +6,7 @@ class BicyclepostsController < ApplicationController
   # GET /bicycleposts.json
   def index
     @bicycleposts = Bicyclepost.all
+    @categories = Bicyclecategory.all
   end
 
   # GET /bicycleposts/1
