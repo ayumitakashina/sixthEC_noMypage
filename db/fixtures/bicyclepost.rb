@@ -68,3 +68,17 @@ Bicyclepost.seed do |s|
 	s.value = "5000"
 	s.bicyclecategory_id = 2
 end
+
+Bicyclepost.seed do |s|
+	s.id = 11
+	s.name = "イェイェイェイェイェイ"
+	s.value = "5000"
+	s.bicyclecategory_id = 2
+end
+
+Bicyclepost.seed do |s|
+	s.id = 12
+	s.name = "ウォウォウォウォウ"
+	s.value = "5000"
+	s.bicyclecategory_id = 2
+end

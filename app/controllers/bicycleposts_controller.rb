@@ -5,7 +5,7 @@ class BicyclepostsController < ApplicationController
   # GET /bicycleposts
   # GET /bicycleposts.json
   def index
-    @bicycleposts = Bicyclepost.all
+    @bicycleposts = Bicyclepost.page(params[:page])
     @categories = Bicyclecategory.all
   end
 
