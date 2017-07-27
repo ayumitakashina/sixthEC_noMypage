@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'bicycles/index/:id' => 'bicycles#index'
+
+  get 'bicycles/category'
+  resources :bicycles
+  
+
   resources :orders
   get 'users/show'
 
